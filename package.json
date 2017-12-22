@@ -1,0 +1,22 @@
+{
+  "name": "npmdemo",
+  "version": "1.0.0",
+  "description": "demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ccq18/npmdemo.git"
+  },
+  "keywords": [
+    "demo"
+  ],
+  "author": "ccq18",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ccq18/npmdemo/issues"
+  },
+  "homepage": "https://github.com/ccq18/npmdemo#readme"
+}
