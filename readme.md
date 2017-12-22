@@ -5,11 +5,12 @@
 cmd>npm init  
   
 按照提示输入package名，description，email，版本等信息，就会自动生成  
+```
 {
   "name": "npmdemo001",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "demo",
-  "main": "index.js",
+  "main": "./lib/module.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -27,13 +28,14 @@ cmd>npm init
   },
   "homepage": "https://github.com/ccq18/npmdemo#readme"
 }
+```
 
   
    
   
 ## 2.编写你的module  
   
-创建lib目录，创建module1.js文件，内容：  
+创建lib目录，创建module.js文件，内容：  
   
 var A = "value A";  
 var B = "value B";  
@@ -62,6 +64,13 @@ cmd>npm publish
  Ps：
  1.包名不能喝目前已有的包冲突   
  2.记得去网站上验证邮箱
+ 3.记得添加.gitignore
+ ```
+/node_modules
+/.idea
+.DS_Store
+```
+ 4.注意package.json的main 是默认执行的文件名
 ## 5.验证  
   
 在http://search.npmjs.org/可以查询刚刚发布的module    
@@ -78,8 +87,10 @@ cmd>yarn add npmdemo001
 var util = require('util');  
 var A = "a different value A";  
 var B = "a different value B";  
-var m1 = require('yypi');  
-util.log('A='+A+' B='+B+' values='+util.inspect(m1.values()));  
+//var m1 = require('npmdemo001/lib/module');
+var m1 = require('npmdemo001');
+
+util.log('A='+A+' B='+B+' values='+util.inspect(m1.values()));
   
    
   
