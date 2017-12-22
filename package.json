@@ -1,6 +1,6 @@
 {
   "name": "npmdemo001",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "demo",
   "main": "./lib/module.js",
   "scripts": {
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/ccq18/npmdemo/issues"
   },
-  "homepage": "https://github.com/ccq18/npmdemo#readme"
+  "homepage": "https://github.com/ccq18/npmdemo#readme",
+  "bin": {
+    "runnpmserver": "./lib/someTool.js"
+  },
+  "dependencies": {
+    "express": "^4.16.2"
+  }
 }
